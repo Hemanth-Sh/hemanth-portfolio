@@ -146,39 +146,39 @@ staggerElements.forEach((el, index) => {
     el.style.transitionDelay = `${index * 0.1}s`;
 });
 
-// Contact form handling
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+// // Contact form handling
+// const contactForm = document.getElementById('contact-form');
+// if (contactForm) {
+//     contactForm.addEventListener('submit', function(e) {
+//         e.preventDefault();
         
-        const formData = new FormData(this);
-        const formObject = Object.fromEntries(formData);
+//         const formData = new FormData(this);
+//         const formObject = Object.fromEntries(formData);
         
-        // Simulate form submission
-        const submitBtn = this.querySelector('.submit-btn');
-        if (submitBtn) {
-            const originalText = submitBtn.textContent;
+//         // Simulate form submission
+//         const submitBtn = this.querySelector('.submit-btn');
+//         if (submitBtn) {
+//             const originalText = submitBtn.textContent;
             
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
+//             submitBtn.textContent = 'Sending...';
+//             submitBtn.disabled = true;
             
-            setTimeout(() => {
-                submitBtn.textContent = 'Message Sent!';
-                submitBtn.style.background = 'var(--gradient-success)';
+//             setTimeout(() => {
+//                 submitBtn.textContent = 'Message Sent!';
+//                 submitBtn.style.background = 'var(--gradient-success)';
                 
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = 'var(--gradient-primary)';
-                    this.reset();
-                }, 2000);
-            }, 1000);
-        }
+//                 setTimeout(() => {
+//                     submitBtn.textContent = originalText;
+//                     submitBtn.disabled = false;
+//                     submitBtn.style.background = 'var(--gradient-primary)';
+//                     this.reset();
+//                 }, 2000);
+//             }, 1000);
+//         }
         
-        console.log('Form submitted:', formObject);
-    });
-}
+//         console.log('Form submitted:', formObject);
+//     });
+// }
 
 // Dynamic background particles
 function createParticle() {
